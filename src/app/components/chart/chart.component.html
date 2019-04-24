@@ -1,0 +1,13 @@
+<div *ngIf="marketPrice && transactions" class="chart">
+  <h3>Market Price (USD)</h3>
+  <google-chart [title]="marketPrice.name" type="Line" [data]="marketPrice.values" options="black"
+    [dynamicResize]="true" style="width: 100%; height: 350px;">
+  </google-chart>
+  <h4>Average USD market price across major bitcoin exchanges.</h4>
+  <hr>
+  <h3>Confirmed Transactions Per Day</h3>
+  <google-chart [title]="transactions.name" type="Line" [data]="transactions.values" options="black"
+    [dynamicResize]="true" style="width: 100%; height: 350px" >
+  </google-chart>
+  <h4>The number of daily confirmed Bitcoin transactions</h4>
+</div>

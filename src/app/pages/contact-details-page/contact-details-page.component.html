@@ -1,0 +1,14 @@
+<div class="contact-details">
+  <div class="details-nav">
+    <img class="back-btn" src="assets/icons/back.png" alt="Person" width="24" height="24" (click)="backToContacts()" />
+    <img class="edit-btn" src="assets/icons/edit.png" alt="Person" width="24" height="24" (click)="toEdit(contact)" />
+  </div>
+  <div class="contact-details-body">
+    <img src="assets/icons/img_avatar.png" alt="Person" width="96" height="96" />
+    <div class="contact-details-row">Name: {{contact.name}}</div>
+    <div class="contact-details-row">Phone: {{contact.phone}}</div>
+    <div class="contact-details-row">Email: {{contact.email}}</div>
+  </div>
+  <transfer-fund [contact]="contact"></transfer-fund>
+  <moves-list title="Your moves" [moves]="moves"></moves-list>
+</div>

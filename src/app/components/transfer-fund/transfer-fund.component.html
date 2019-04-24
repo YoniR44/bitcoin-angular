@@ -1,0 +1,8 @@
+<div class="transfer-fund">
+    <div>Transfer coins to {{contact.name}}</div>
+    <form class="transfer-form" (submit)="onTransfer($event)">
+        <label>Amount: </label>
+        <input class="transfer-input" name="transfer" type="number" [(ngModel)]="transferAmount" />
+        <button type="submit">Transfer</button>
+    </form>
+</div>

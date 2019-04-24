@@ -1,0 +1,7 @@
+<section class="contacts-list">
+  <ul>
+    <li class="contacts-list-item" *ngFor="let contact of contacts">
+      <contact-preview [contact]="contact" (click)="openContact(contact)"></contact-preview>
+    </li>
+  </ul>
+</section>

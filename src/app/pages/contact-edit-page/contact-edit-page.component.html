@@ -1,0 +1,20 @@
+<form class="contacts-edit" (submit)="onSubmit($event)">
+  <div class="edit-nav">
+    <img class="back-btn" src="assets/icons/back.png" alt="Back" width="24" height="24" (click)="goBack()" />
+    <img class="delete-btn" *ngIf="id" (click)="onDelete()" src="assets/icons/delete.png" alt="Delete" width="24" height="24" />
+  </div>
+  <img src="assets/icons/img_avatar.png" alt="Person" width="96" height="96" />
+  <div class="input-item">
+    <label>Name: </label>
+    <input class="input" name="name" [(ngModel)]="contact.name" type="name" placeholder="Name" required />
+  </div>
+  <div class="input-item">
+    <label>Phone: </label>
+    <input class="input" name="phone" [(ngModel)]="contact.phone" type=" name" placeholder="Phone" required />
+  </div>
+  <div class="input-item">
+    <label>Email: </label>
+    <input class="input" name="email" [(ngModel)]="contact.email" type="name" placeholder="Email" required />
+  </div>
+  <button class="btn" type="submit">Save</button>
+</form>

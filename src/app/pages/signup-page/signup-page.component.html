@@ -1,0 +1,10 @@
+<div class="signup-page">
+    <form class="signup-form" (submit)="onSignup()">
+        <img src="assets/icons/bitcoin.png" alt="" height="96" width="96" />
+        <div>
+            <label>Please enter your name: </label>
+            <input class="user-input" type="text" name="name" [(ngModel)]="name" />
+        </div>
+        <button type="submit">Signup</button>
+    </form>
+</div>
