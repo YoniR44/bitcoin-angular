@@ -20,12 +20,12 @@ export class ContactEditPageComponent implements OnInit {
       
       if (!this.id) {
         this.contact = { name: '', phone: '', email: '' };
-        return;
+      } else {
+        this.contactService.getContactById(this.id).subscribe(contact => {
+          this.contact = contact;
+        })
       }
 
-      this.contactService.getContactById(this.id).subscribe(contact => {
-        this.contact = contact;
-      })
     })
   }
 
